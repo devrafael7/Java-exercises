@@ -7,14 +7,14 @@ import java.util.*;
 @RequestMapping("/api")
 public class DemoController {
     
-    @GetMapping("hello")
+    @GetMapping("/hello")
     public String hello(){
         return "Hello world!";
     }
 
     @GetMapping("/greet")
     public String greet(@RequestParam String name){
-        return "Hi" + name;
+        return "Hi, " + name;
     }
 
     @GetMapping("/sum")
@@ -28,7 +28,7 @@ public class DemoController {
         return "User: " + name + "has been created succesfully";
     }
 
-    @GetMapping
+    @GetMapping("/list")
     public List<String> listUsers(){
         return Arrays.asList("Rafa", "João", "Maria");
     }
