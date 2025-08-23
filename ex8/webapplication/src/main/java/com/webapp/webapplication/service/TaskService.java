@@ -1,5 +1,9 @@
 package com.webapp.webapplication.service;
 
+import java.util.List;
+
+import com.webapp.webapplication.model.Task;
+
 public class TaskService {
     private final TaskRepository repo;
 
@@ -11,7 +15,7 @@ public class TaskService {
         return repo.save(task);
     }
 
-    public List<Task> getTasks(Longer userId){
+    public List<Task> getTasks(Long userId){
         return repo.findByUserId(userId);
     }
 
